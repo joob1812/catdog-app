@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat ou Chien</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>🐾 Prédicteur Chat ou Chien by JoOb</h1>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="files" accept="image/*" multiple id="fileInput" required>
+    <div id="dropArea">Glissez vos images ici ou cliquez pour en choisir</div>
+    <button type="submit">Prédire</button>
+  </form>
+
+  <div class="results">
+    {% for image, prediction, confidence in results %}
+      <div class="result-box">
+        <img src="{{ url_for('uploaded_file', filename=image) }}" width="150">
+        <p style="color:{{ 'green' if '😺' in prediction or '🐶' in prediction else 'black' }}">
+          {{ prediction }}<br><small>({{ confidence }})</small>
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    const dropArea = document.getElementById('dropArea');
+    const fileInput = document.getElementById('fileInput');
+
+    dropArea.addEventListener('click', () => fileInput.click());
+    dropArea.addEventListener('dragover', e => {
+      e.preventDefault();
+      dropArea.classList.add('dragover');
+    });
+    dropArea.addEventListener('dragleave', () => dropArea.classList.remove('dragover'));
+    dropArea.addEventListener('drop', e => {
+      e.preventDefault();
+      dropArea.classList.remove('dragover');
+      fileInput.files = e.dataTransfer.files;
+    });
+  </script>
+</body>
+</html>

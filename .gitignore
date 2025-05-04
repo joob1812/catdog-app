@@ -1,0 +1,56 @@
+# 🔥 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+ENV/
+env/
+*.sqlite3
+*.log
+
+# 🧪 Jupyter / Notebook
+.ipynb_checkpoints
+
+# 📦 Packages
+*.tar.gz
+*.whl
+dist/
+build/
+
+# 🔍 IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# 📁 Flask / App spécifiques
+instance/
+uploads/
+*.h5
+model/
+*.db
+
+# 🐘 Logs
+*.log
+
+# 📷 Image cache
+*.jpg
+*.jpeg
+*.png
+
+# 🚀 Déploiement
+.DS_Store
+*.zip
+node_modules/
+
+# 🐍 pipenv/poetry
+Pipfile.lock
+poetry.lock
+
+# 📦 PyInstaller
+*.spec

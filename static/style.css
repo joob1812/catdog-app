@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 2em;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 2em;
+}
+
+#dropArea {
+  border: 2px dashed #aaa;
+  padding: 2em;
+  margin: 1em auto;
+  width: 50%;
+  cursor: pointer;
+  background: white;
+}
+
+#dropArea.dragover {
+  background-color: #def;
+  border-color: #339;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.result-box {
+  border: 1px solid #ccc;
+  padding: 1em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #999;
+}
