@@ -28,12 +28,7 @@ build/
 *.sublime-workspace
 *.sublime-project
 
-# 📁 Flask / App spécifiques
-instance/
-uploads/
-*.h5
-model/
-*.db
+
 
 # 🐘 Logs
 *.log
