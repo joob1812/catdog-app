@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-model = load_model("model/catdog_model.h5")
+model = load_model("model/catdog_model.keras")
 img_size = (128, 128)
 
 UPLOAD_FOLDER = os.path.join("static", "uploads")
